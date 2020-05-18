@@ -12,4 +12,16 @@ export default {
       template: 'src/footer-template.html',
     }),
   ],
+  optimization: {
+    minimize: true,
+    removeEmptyChunks: false,
+    mergeDuplicateChunks: false,
+    splitChunks: {
+      minSize: 0,
+      maxSize: 4500000,
+      minChunks: 1,
+      automaticNameDelimiter: '-',
+      hidePathInfo: true
+    }
+  }
 } as webpack.Configuration;
